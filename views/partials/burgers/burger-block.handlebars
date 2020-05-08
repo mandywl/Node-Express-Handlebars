@@ -6,5 +6,7 @@
         Devour it!
     </button>
     {{/if}}
-
+    {{#unless devoured}}
+    <button class="delete-burger" data-id="{{this.id}}">Delete!</button>
+    {{/unless}}
 </li>
