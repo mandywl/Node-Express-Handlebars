@@ -34,4 +34,4 @@
 
 ## Deployed URL
 
-- https://github.com/mandywl/12-Employee-Management-System
+- https://eat-da-burger-mandy.herokuapp.com
