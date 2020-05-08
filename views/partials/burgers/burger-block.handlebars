@@ -1,12 +1,12 @@
 <li class="row">
-    <div class="burger-name col-8">{{id}}. {{burger_name}}</div>
+    <div class="burger-name col-8">{{burger_name}}</div>
 
     {{#if devoured}}
-    <button class="change-devoured col-3" data-id="{{id}}" data-newdevoured="{{devoured}}">
+    <button class="change-devoured btn btn-primary col-3" data-id="{{id}}" data-newdevoured="{{devoured}}">
         Devour it!
     </button>
     {{/if}}
     {{#unless devoured}}
-    <button class="delete-burger" data-id="{{this.id}}">Delete!</button>
+    <button class="delete-burger btn btn-primary" data-id="{{this.id}}">Delete!</button>
     {{/unless}}
 </li>
