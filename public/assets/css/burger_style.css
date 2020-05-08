@@ -42,3 +42,7 @@ li {
   min-width: 80px;
   border-radius: 5px;
 }
+
+.warning {
+  color: red;
+}

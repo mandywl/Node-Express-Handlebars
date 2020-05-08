@@ -22,10 +22,22 @@ $(function () {
   $(".create-form").on("submit", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
-    var newBurger = {
-      burger_name: $("#bu").val().trim(),
-    };
+    var input = $("#bu").val().trim();
+    if (input.length !== 0 && input.length < 40) {
+      $(".warning").empty();
+      var newBurger = {
+        burger_name: $("#bu").val().trim(),
+      };
+    } else {
+      event.preventDefault();
+      $(".warning").empty();
+      $("form").append(
+        $(
+          "<p class='warning'>Please enter a valid burger name less than 40 characters!</p>"
+        )
+      );
+      return;
+    }
 
     // Send the POST request.
     $.ajax("/api/burgers", {
